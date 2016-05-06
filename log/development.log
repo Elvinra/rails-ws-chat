@@ -1,0 +1,1629 @@
+
+
+Started GET "/" for ::1 at 2016-05-06 18:19:35 +0200
+
+ActiveRecord::NoDatabaseError (FATAL:  role "elvinra" does not exist
+):
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/postgresql_adapter.rb:661:in `rescue in connect'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/elvinra/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/elvinra/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.5.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.5.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.5.1) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.5.1) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  faye-websocket (0.10.3) lib/faye/adapters/thin.rb:40:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  faye-websocket (0.10.3) lib/faye/adapters/thin.rb:44:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5.1) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5.1) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5.1) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5.1) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5.1) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5.1) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (1.7.1) lib/spring/client/rails.rb:28:in `load'
+  spring (1.7.1) lib/spring/client/rails.rb:28:in `call'
+  spring (1.7.1) lib/spring/client/command.rb:7:in `call'
+  spring (1.7.1) lib/spring/client.rb:30:in `run'
+  spring (1.7.1) bin/spring:49:in `<top (required)>'
+  spring (1.7.1) lib/spring/binstub.rb:11:in `load'
+  spring (1.7.1) lib/spring/binstub.rb:11:in `<top (required)>'
+  /home/elvinra/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  /home/elvinra/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  bin/spring:13:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.8ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.8ms)
+
+
+Started GET "/" for ::1 at 2016-05-06 18:23:36 +0200
+
+RuntimeError (Cannot load `Rails.application.database_configuration`:
+Could not load database configuration. No such file - ["config/database.yml"]):
+  railties (4.2.5.1) lib/rails/application/configuration.rb:110:in `database_configuration'
+  activerecord (4.2.5.1) lib/active_record/railtie.rb:117:in `block (2 levels) in <class:Railtie>'
+  activesupport (4.2.5.1) lib/active_support/lazy_load_hooks.rb:38:in `instance_eval'
+  activesupport (4.2.5.1) lib/active_support/lazy_load_hooks.rb:38:in `execute_hook'
+  activesupport (4.2.5.1) lib/active_support/lazy_load_hooks.rb:45:in `block in run_load_hooks'
+  activesupport (4.2.5.1) lib/active_support/lazy_load_hooks.rb:44:in `each'
+  activesupport (4.2.5.1) lib/active_support/lazy_load_hooks.rb:44:in `run_load_hooks'
+  activerecord (4.2.5.1) lib/active_record/base.rb:315:in `<module:ActiveRecord>'
+  activerecord (4.2.5.1) lib/active_record/base.rb:26:in `<top (required)>'
+  activesupport (4.2.5.1) lib/active_support/dependencies.rb:274:in `require'
+  activesupport (4.2.5.1) lib/active_support/dependencies.rb:274:in `block in require'
+  activesupport (4.2.5.1) lib/active_support/dependencies.rb:240:in `load_dependency'
+  activesupport (4.2.5.1) lib/active_support/dependencies.rb:274:in `require'
+  activerecord (4.2.5.1) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.5.1) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  faye-websocket (0.10.3) lib/faye/adapters/thin.rb:40:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  faye-websocket (0.10.3) lib/faye/adapters/thin.rb:44:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5.1) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5.1) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5.1) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5.1) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5.1) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5.1) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (1.7.1) lib/spring/client/rails.rb:28:in `load'
+  spring (1.7.1) lib/spring/client/rails.rb:28:in `call'
+  spring (1.7.1) lib/spring/client/command.rb:7:in `call'
+  spring (1.7.1) lib/spring/client.rb:30:in `run'
+  spring (1.7.1) bin/spring:49:in `<top (required)>'
+  spring (1.7.1) lib/spring/binstub.rb:11:in `load'
+  spring (1.7.1) lib/spring/binstub.rb:11:in `<top (required)>'
+  /home/elvinra/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  /home/elvinra/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  bin/spring:13:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.1ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.9ms)
+                                                                                                                                                                                                                                                                                              
+
+Started GET "/" for ::1 at 2016-05-06 18:36:06 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/railties-4.2.5.1/lib/rails/templates/rails/welcome/index.html.erb (6.3ms)
+Completed 200 OK in 35ms (Views: 34.4ms)
+
+
+Started GET "/" for ::1 at 2016-05-06 18:45:41 +0200
+
+AbstractController::ActionNotFound (The action 'show' could not be found for HomesController):
+  actionpack (4.2.5.1) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.5.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:815:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  faye-websocket (0.10.3) lib/faye/adapters/thin.rb:40:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  faye-websocket (0.10.3) lib/faye/adapters/thin.rb:44:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5.1) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5.1) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5.1) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5.1) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5.1) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5.1) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (1.7.1) lib/spring/client/rails.rb:28:in `load'
+  spring (1.7.1) lib/spring/client/rails.rb:28:in `call'
+  spring (1.7.1) lib/spring/client/command.rb:7:in `call'
+  spring (1.7.1) lib/spring/client.rb:30:in `run'
+  spring (1.7.1) bin/spring:49:in `<top (required)>'
+  spring (1.7.1) lib/spring/binstub.rb:11:in `load'
+  spring (1.7.1) lib/spring/binstub.rb:11:in `<top (required)>'
+  /home/elvinra/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  /home/elvinra/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  bin/spring:13:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.0ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (67.9ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (146.5ms)
+
+
+Started GET "/" for ::1 at 2016-05-06 18:46:08 +0200
+Processing by HomesController#show as HTML
+Completed 500 Internal Server Error in 3ms
+
+ActionView::MissingTemplate (Missing template homes/show, application/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/elvinra/Project/rails-ws-chat/app/views"
+):
+  actionview (4.2.5.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.5.1) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.5.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.5.1) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.5.1) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.5.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.5.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.5.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.5.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.5.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.5.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.5.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.5.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.5.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/elvinra/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.5.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.5.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.5.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.5.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.5.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:815:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  faye-websocket (0.10.3) lib/faye/adapters/thin.rb:40:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  faye-websocket (0.10.3) lib/faye/adapters/thin.rb:44:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5.1) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5.1) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5.1) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5.1) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5.1) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5.1) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (1.7.1) lib/spring/client/rails.rb:28:in `load'
+  spring (1.7.1) lib/spring/client/rails.rb:28:in `call'
+  spring (1.7.1) lib/spring/client/command.rb:7:in `call'
+  spring (1.7.1) lib/spring/client.rb:30:in `run'
+  spring (1.7.1) bin/spring:49:in `<top (required)>'
+  spring (1.7.1) lib/spring/binstub.rb:11:in `load'
+  spring (1.7.1) lib/spring/binstub.rb:11:in `<top (required)>'
+  /home/elvinra/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  /home/elvinra/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  bin/spring:13:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (17.0ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (47.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.9ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.3ms)
+
+
+Started GET "/" for ::1 at 2016-05-06 18:47:07 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 1845ms (Views: 1844.6ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 18:47:10 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 18:47:10 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 18:47:10 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 18:47:10 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 18:47:10 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 18:47:10 +0200
+
+
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 18:47:10 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 18:47:10 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 18:47:10 +0200
+
+
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 18:47:10 +0200
+
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 18:47:10 +0200
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-06 18:47:10 +0200
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-05-06 18:47:10 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 18:47:27 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 42ms (Views: 42.3ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 18:47:27 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 18:47:27 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 18:47:27 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 18:47:27 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 18:47:27 +0200
+
+
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 18:47:27 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 18:47:27 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 18:47:27 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 18:47:27 +0200
+
+
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 18:47:27 +0200
+
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 18:47:27 +0200
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-06 18:47:27 +0200
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-05-06 18:47:27 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 18:51:27 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 1401ms
+
+LoadError (cannot load such file -- coffee_script):
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1314975764987983025_41973900'
+
+
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.5ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (20.5ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (39.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-06 18:52:58 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 13ms
+
+LoadError (cannot load such file -- coffee_script):
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1314975764987983025_41973900'
+
+
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.1ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.7ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.9ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.7ms)
+
+
+Started GET "/" for ::1 at 2016-05-06 18:54:07 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 14ms
+
+LoadError (cannot load such file -- coffee_script):
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1314975764987983025_41973900'
+
+
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.0ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-06 18:54:25 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 510ms (Views: 509.6ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 18:54:26 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 18:54:26 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 18:54:26 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 18:54:26 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 18:54:26 +0200
+
+
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 18:54:26 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 18:54:26 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 18:54:26 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 18:54:26 +0200
+
+
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 18:54:26 +0200
+
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 18:54:26 +0200
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-05-06 18:54:26 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 18:56:22 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 27ms (Views: 27.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 18:56:22 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 18:56:22 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 18:56:22 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 18:56:22 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 18:56:22 +0200
+
+
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 18:56:22 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 18:56:23 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 18:56:23 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 18:56:23 +0200
+
+
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 18:56:23 +0200
+
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 18:56:23 +0200
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-05-06 18:56:23 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 18:56:24 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 26ms (Views: 25.5ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 18:56:24 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 18:56:24 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 18:56:24 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 18:56:24 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 18:56:24 +0200
+
+
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 18:56:24 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 18:56:25 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 18:56:25 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 18:56:25 +0200
+
+
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 18:56:25 +0200
+
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 18:56:25 +0200
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-05-06 18:56:25 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 18:57:27 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 1074ms
+
+ActionView::Template::Error (Typescript error in file '/home/elvinra/Project/rails-ws-chat/app/assets/javascripts/home.js.ts.ts':
+/tmp/typescript-node20160506-4850-1iqsk9n.ts(1,1): error TS2304: Cannot find name '$'.
+):
+    3: <head>
+    4:   <title>RailsWsChat</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all' %>
+    6:   <%= javascript_include_tag 'application' %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1595100745090124205_29278720'
+
+
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.7ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.6ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (39.8ms)
+
+
+Started GET "/" for ::1 at 2016-05-06 19:02:39 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 1550ms (Views: 1549.9ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 19:02:41 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 19:02:41 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 19:02:41 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 19:02:41 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 19:02:41 +0200
+
+
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 19:02:41 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 19:02:41 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 19:02:41 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 19:02:41 +0200
+
+
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 19:02:41 +0200
+
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 19:02:41 +0200
+
+
+Started GET "/assets/home.self-a1fc7fc58eff210c331c2de1ca4c18f55ec4ef204c90e26ab0fdefeb5e37ccfe.js?body=1" for ::1 at 2016-05-06 19:02:41 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-06 19:02:41 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 19:02:45 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 24ms (Views: 23.6ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 19:02:45 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 19:02:45 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 19:02:45 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 19:02:45 +0200
+
+
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 19:02:45 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 19:02:45 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 19:02:45 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 19:02:45 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 19:02:45 +0200
+
+
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 19:02:45 +0200
+
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 19:02:45 +0200
+
+
+Started GET "/assets/home.self-a1fc7fc58eff210c331c2de1ca4c18f55ec4ef204c90e26ab0fdefeb5e37ccfe.js?body=1" for ::1 at 2016-05-06 19:02:45 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-06 19:02:45 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 19:03:34 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 1155ms
+
+ActionView::Template::Error (Typescript error in file '/home/elvinra/Project/rails-ws-chat/app/assets/javascripts/home.js.ts.ts':
+/tmp/typescript-node20160506-5413-1jo9z80.ts(4,26): error TS2304: Cannot find name 'WebSocketRails'.
+):
+    3: <head>
+    4:   <title>RailsWsChat</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all' %>
+    6:   <%= javascript_include_tag 'application' %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__4017301721417360326_30801160'
+
+
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.4ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (25.4ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (44.4ms)
+
+
+Started GET "/" for ::1 at 2016-05-06 19:05:49 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 74ms (Views: 74.0ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 19:05:49 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 19:05:49 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 19:05:49 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 19:05:49 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 19:05:49 +0200
+
+
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 19:05:49 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 19:05:49 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 19:05:49 +0200
+
+
+Started GET "/assets/home.self-f1339f53bc2025e660be6cfecfa615f2d8ac6e3ef785a957e5fd522f30cd7aab.js?body=1" for ::1 at 2016-05-06 19:05:49 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 19:05:49 +0200
+
+
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 19:05:49 +0200
+
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 19:05:49 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-06 19:05:49 +0200
+
+
+Started GET "/websocket" for ::1 at 2016-05-06 19:05:49 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 19:44:01 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 617ms (Views: 616.6ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 19:44:02 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 19:44:02 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 19:44:02 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 19:44:02 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 19:44:02 +0200
+
+
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 19:44:02 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 19:44:02 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 19:44:02 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 19:44:02 +0200
+
+
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 19:44:02 +0200
+
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 19:44:02 +0200
+
+
+Started GET "/assets/home.self-3431de25000e7c254e8f34d9e3686f6d42d873f093a813cf70538edd84a0c880.js?body=1" for ::1 at 2016-05-06 19:44:02 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-06 19:44:02 +0200
+
+
+Started GET "/websocket" for ::1 at 2016-05-06 19:44:02 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 19:51:24 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 1662ms (Views: 1662.0ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 19:51:26 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 19:51:26 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 19:51:26 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 19:51:26 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 19:51:26 +0200
+
+
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 19:51:26 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 19:51:26 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 19:51:26 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 19:51:26 +0200
+
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 19:51:26 +0200
+
+
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 19:51:26 +0200
+
+
+Started GET "/assets/home.self-0ec274b04b598c2bf44fc23a4bba1a204d82d7b5ea06c324ffc4eab4364db0fe.js?body=1" for ::1 at 2016-05-06 19:51:26 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-06 19:51:26 +0200
+
+
+Started GET "/websocket" for ::1 at 2016-05-06 19:51:27 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 19:54:17 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 389ms (Views: 388.6ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 19:54:18 +0200
+
+
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 19:54:18 +0200
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 19:54:18 +0200
+
+
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 19:54:18 +0200
+
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 19:54:18 +0200
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 19:54:18 +0200
+
+
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 19:54:18 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 19:54:18 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 19:54:18 +0200
+
+
+Started GET "/assets/home.self-0ec274b04b598c2bf44fc23a4bba1a204d82d7b5ea06c324ffc4eab4364db0fe.js?body=1" for ::1 at 2016-05-06 19:54:18 +0200
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 19:54:18 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-06 19:54:18 +0200
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 19:54:18 +0200
+
+
+Started GET "/websocket" for ::1 at 2016-05-06 19:54:18 +0200
+
+RuntimeError (eventmachine not initialized: evma_install_oneshot_timer):
+  eventmachine (1.2.0.1) lib/eventmachine.rb:327:in `add_oneshot_timer'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:327:in `add_timer'
+  eventmachine (1.2.0.1) lib/em/timers.rb:50:in `schedule'
+  eventmachine (1.2.0.1) lib/em/timers.rb:37:in `initialize'
+  websocket-rails (0.7.0) lib/websocket_rails/connection_adapters.rb:167:in `new'
+  websocket-rails (0.7.0) lib/websocket_rails/connection_adapters.rb:167:in `start_ping_timer'
+  websocket-rails (0.7.0) lib/websocket_rails/connection_adapters.rb:46:in `initialize'
+  websocket-rails (0.7.0) lib/websocket_rails/connection_adapters/web_socket.rb:10:in `initialize'
+  websocket-rails (0.7.0) lib/websocket_rails/connection_adapters.rb:14:in `new'
+  websocket-rails (0.7.0) lib/websocket_rails/connection_adapters.rb:14:in `establish_connection'
+  websocket-rails (0.7.0) lib/websocket_rails/connection_manager.rb:78:in `open_connection'
+  websocket-rails (0.7.0) lib/websocket_rails/connection_manager.rb:55:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/mapper.rb:51:in `serve'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:815:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+  puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+  puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+  puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+  puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+
+
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.9ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (48.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/elvinra/.rvm/gems/ruby-2.3.0@rails-ws-chat/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (71.6ms)
+
+
+Started GET "/" for ::1 at 2016-05-06 19:58:23 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 2945ms (Views: 2944.5ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 19:58:26 +0200
+
+
+
+
+
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-9d23fc52341d983ef6749a252c9cbbdeeaa1508dcb06ad8987858933c46c3874.js?body=1" for ::1 at 2016-05-06 19:58:26 +0200
+
+
+
+Started GET "/assets/websocket_rails/event.self-217b79a4f33f871408f22b4040858538c84fe0a74ba448a96b33075dffc75cc6.js?body=1" for ::1 at 2016-05-06 19:58:26 +0200
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 19:58:26 +0200
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 19:58:26 +0200
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 19:58:26 +0200
+
+
+
+
+
+
+Started GET "/assets/websocket_rails/http_connection.self-23bdc1ed62b76f37903008fa3166c160bfb1030b985c471ca6698ae6a22b2fdd.js?body=1" for ::1 at 2016-05-06 19:58:26 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 19:58:26 +0200
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 19:58:26 +0200
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 19:58:26 +0200
+Started GET "/assets/websocket_rails/channel.self-8a72f722bd5d40348d8d2c6ff88e770e0f029cfaedf0274a50e4b512e223412c.js?body=1" for ::1 at 2016-05-06 19:58:26 +0200
+
+
+
+Started GET "/assets/home.self-0ec274b04b598c2bf44fc23a4bba1a204d82d7b5ea06c324ffc4eab4364db0fe.js?body=1" for ::1 at 2016-05-06 19:58:26 +0200
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-06 19:58:26 +0200
+
+
+Started GET "/websocket" for ::1 at 2016-05-06 19:58:26 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 20:03:49 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 1661ms (Views: 1660.4ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 20:03:51 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 20:03:51 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 20:03:51 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 20:03:51 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 20:03:51 +0200
+
+
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 20:03:51 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 20:03:51 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 20:03:51 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 20:03:51 +0200
+
+
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 20:03:51 +0200
+
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 20:03:51 +0200
+
+
+Started GET "/assets/home.self-309b88efa936d4955f7893f4c6704d8a679d273b890e0bbc0a2f4c41f77061c7.js?body=1" for ::1 at 2016-05-06 20:03:51 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-06 20:03:51 +0200
+
+
+Started GET "/websocket" for 127.0.0.1 at 2016-05-06 20:03:51 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 20:04:23 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 30ms (Views: 29.6ms)
+
+
+Started GET "/websocket" for 127.0.0.1 at 2016-05-06 20:04:23 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 20:08:02 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 1274ms (Views: 1273.7ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 20:08:03 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 20:08:03 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 20:08:03 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 20:08:03 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 20:08:03 +0200
+
+
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 20:08:03 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 20:08:03 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 20:08:03 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 20:08:03 +0200
+
+
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 20:08:03 +0200
+
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 20:08:03 +0200
+
+
+Started GET "/assets/home.self-b512233c62ae2337fa2438774a251016362506daf28c18b85e5fb3f2e15bd2fd.js?body=1" for ::1 at 2016-05-06 20:08:03 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-06 20:08:03 +0200
+
+
+Started GET "/websocket" for 127.0.0.1 at 2016-05-06 20:08:03 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 20:08:27 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 1275ms (Views: 1274.6ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 20:08:28 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 20:08:28 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 20:08:28 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 20:08:28 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 20:08:28 +0200
+
+
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 20:08:28 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 20:08:28 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 20:08:28 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 20:08:28 +0200
+
+
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 20:08:28 +0200
+
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 20:08:28 +0200
+
+
+Started GET "/assets/home.self-4c8159503690249a6040a47ddf0e099605f3fd09809049121089c37b6d5e5675.js?body=1" for ::1 at 2016-05-06 20:08:28 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-06 20:08:29 +0200
+
+
+Started GET "/websocket" for 127.0.0.1 at 2016-05-06 20:08:29 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 20:09:44 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 426ms (Views: 425.8ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 20:09:45 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 20:09:45 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 20:09:45 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 20:09:45 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 20:09:45 +0200
+
+
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 20:09:45 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 20:09:45 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 20:09:45 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 20:09:45 +0200
+
+
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 20:09:45 +0200
+
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 20:09:45 +0200
+
+
+Started GET "/assets/home.self-4c8159503690249a6040a47ddf0e099605f3fd09809049121089c37b6d5e5675.js?body=1" for ::1 at 2016-05-06 20:09:45 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-06 20:09:45 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 20:10:19 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 1249ms (Views: 1248.5ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 20:10:21 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 20:10:21 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 20:10:21 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 20:10:21 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 20:10:21 +0200
+
+
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 20:10:21 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 20:10:21 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 20:10:21 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 20:10:21 +0200
+
+
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 20:10:21 +0200
+
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 20:10:21 +0200
+
+
+Started GET "/assets/home.self-e352a7a6b1d16d7b57158bb8e2a499becf14008fe40e631b3c04332c9ac8d9e2.js?body=1" for ::1 at 2016-05-06 20:10:21 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-06 20:10:21 +0200
+
+
+Started GET "/websocket" for ::1 at 2016-05-06 20:10:21 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 20:12:29 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 437ms (Views: 437.3ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 20:12:30 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 20:12:30 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 20:12:30 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 20:12:30 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 20:12:30 +0200
+
+
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 20:12:30 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 20:12:30 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 20:12:30 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 20:12:30 +0200
+
+
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 20:12:30 +0200
+
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 20:12:30 +0200
+
+
+Started GET "/assets/home.self-e352a7a6b1d16d7b57158bb8e2a499becf14008fe40e631b3c04332c9ac8d9e2.js?body=1" for ::1 at 2016-05-06 20:12:30 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-06 20:12:30 +0200
+
+
+Started GET "/websocket" for ::1 at 2016-05-06 20:12:30 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 20:18:08 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 394ms (Views: 393.9ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 20:18:09 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 20:18:09 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 20:18:09 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 20:18:09 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 20:18:09 +0200
+
+
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 20:18:09 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 20:18:09 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 20:18:09 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 20:18:09 +0200
+
+
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 20:18:09 +0200
+
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 20:18:09 +0200
+
+
+Started GET "/assets/home.self-4c8159503690249a6040a47ddf0e099605f3fd09809049121089c37b6d5e5675.js?body=1" for ::1 at 2016-05-06 20:18:09 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-06 20:18:09 +0200
+
+
+Started GET "/websocket" for 127.0.0.1 at 2016-05-06 20:18:09 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 20:18:20 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 1336ms (Views: 1335.4ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 20:18:21 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 20:18:21 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 20:18:21 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 20:18:21 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 20:18:21 +0200
+
+
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 20:18:21 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 20:18:21 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 20:18:21 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 20:18:21 +0200
+
+
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 20:18:21 +0200
+
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 20:18:21 +0200
+
+
+Started GET "/assets/home.self-285e08fef68ed763111927284d9b0cc3c7067bfb52ffeda0232c9743af7c1cba.js?body=1" for ::1 at 2016-05-06 20:18:21 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-06 20:18:21 +0200
+
+
+Started GET "/websocket" for 127.0.0.1 at 2016-05-06 20:18:21 +0200
+
+
+Started GET "/" for ::1 at 2016-05-06 20:21:15 +0200
+Processing by HomesController#show as HTML
+  Rendered homes/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 41ms (Views: 40.9ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-06 20:21:16 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-06 20:21:16 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-06 20:21:16 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-06 20:21:16 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_rails.self-b0fea3efa3fdd47f32cd4280ccc18488ffd7f2136c7c563c63c217044182fe1e.js?body=1" for ::1 at 2016-05-06 20:21:16 +0200
+
+
+Started GET "/assets/websocket_rails/event.self-04d5bb47819660cff48dbf6cc594435e5d0d1107d44470b0890165896fa90030.js?body=1" for ::1 at 2016-05-06 20:21:16 +0200
+
+
+Started GET "/assets/websocket_rails/abstract_connection.self-c59ade07c40033b31f560ae7c6681d3ecc9eca88006e020116d0e538bee3c632.js?body=1" for ::1 at 2016-05-06 20:21:16 +0200
+
+
+Started GET "/assets/websocket_rails/http_connection.self-8314b61f89b6ebcab2dbf126cbb99f4cf0feb5f417530abf373727b653eaf125.js?body=1" for ::1 at 2016-05-06 20:21:16 +0200
+
+
+Started GET "/assets/websocket_rails/websocket_connection.self-a4fd5d8dc295df9ccfa03dae5df35d9a8fd1c54f21afc3c9cef931eff8a980e3.js?body=1" for ::1 at 2016-05-06 20:21:16 +0200
+
+
+Started GET "/assets/websocket_rails/channel.self-51e0b70af4cf956496d3b5ea4b739ec4cc25f979f3eff7abe53a8b4065643e6b.js?body=1" for ::1 at 2016-05-06 20:21:16 +0200
+
+
+Started GET "/assets/websocket_rails/main.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2016-05-06 20:21:16 +0200
+
+
+Started GET "/assets/home.self-285e08fef68ed763111927284d9b0cc3c7067bfb52ffeda0232c9743af7c1cba.js?body=1" for ::1 at 2016-05-06 20:21:16 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-06 20:21:16 +0200
+
+
+Started GET "/websocket" for 127.0.0.1 at 2016-05-06 20:21:16 +0200

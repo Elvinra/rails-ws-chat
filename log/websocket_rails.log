@@ -1,0 +1,65 @@
+# Logfile created on 2016-05-06 19:05:49 +0200 by logger.rb/53141
+I [2016-05-06 19:05:49.691] [[32mConnectionManager[0m] Connection opened: #<Connection::c83686c330678a634f29>
+I [2016-05-06 19:06:09.675] [[32mConnectionManager[0m] Connection closed: #<Connection::c83686c330678a634f29>
+I [2016-05-06 19:06:19.644] [[32mConnectionManager[0m] Connection closed: #<Connection::c83686c330678a634f29>
+I [2016-05-06 19:37:37.825] [[32mConnectionManager[0m] Connection opened: #<Connection::7a12db2b15c39a391f10>
+I [2016-05-06 19:37:57.827] [[32mConnectionManager[0m] Connection closed: #<Connection::7a12db2b15c39a391f10>
+I [2016-05-06 19:38:07.818] [[32mConnectionManager[0m] Connection closed: #<Connection::7a12db2b15c39a391f10>
+I [2016-05-06 19:40:07.676] [[32mConnectionManager[0m] Connection opened: #<Connection::bf53cb99bb473c8c0f54>
+I [2016-05-06 19:40:27.677] [[32mConnectionManager[0m] Connection closed: #<Connection::bf53cb99bb473c8c0f54>
+I [2016-05-06 19:40:37.674] [[32mConnectionManager[0m] Connection closed: #<Connection::bf53cb99bb473c8c0f54>
+I [2016-05-06 19:40:51.818] [[32mConnectionManager[0m] Connection opened: #<Connection::b7fff20862bd4a8440f7>
+I [2016-05-06 19:41:11.819] [[32mConnectionManager[0m] Connection closed: #<Connection::b7fff20862bd4a8440f7>
+I [2016-05-06 19:41:21.816] [[32mConnectionManager[0m] Connection closed: #<Connection::b7fff20862bd4a8440f7>
+I [2016-05-06 19:44:02.819] [[32mConnectionManager[0m] Connection opened: #<Connection::b465ac6c6e7ce87f8d45>
+I [2016-05-06 19:44:22.818] [[32mConnectionManager[0m] Connection closed: #<Connection::b465ac6c6e7ce87f8d45>
+I [2016-05-06 19:44:32.811] [[32mConnectionManager[0m] Connection closed: #<Connection::b465ac6c6e7ce87f8d45>
+I [2016-05-06 19:51:27.130] [[32mConnectionManager[0m] Connection opened: #<Connection::f90961edec8be711c410>
+I [2016-05-06 19:51:47.114] [[32mConnectionManager[0m] Connection closed: #<Connection::f90961edec8be711c410>
+I [2016-05-06 19:51:57.302] [[32mConnectionManager[0m] Connection closed: #<Connection::f90961edec8be711c410>
+I [28766] [2016-05-06 19:58:26.631] [[32mConnectionManager[0m] Connection opened: #<Connection::992e45ee-cd5d-4197-8264-a3c4c79fabbb>
+I [28766] [2016-05-06 20:00:38.475] [[32mConnectionManager[0m] Connection closed: #<Connection::992e45ee-cd5d-4197-8264-a3c4c79fabbb>
+I [30010] [2016-05-06 20:02:33.142] [[32mSynchronize[0m] Server Registered: 38SLdmg2eLr8QJOy-d0xEw
+I [30027] [2016-05-06 20:02:44.336] [[32mSynchronize[0m] Server Registered: xbWGNOO2qKusKmyHOIjkfg
+I [30010] [2016-05-06 20:03:24.766] [[32mSynchronize[0m] Server Removed: 38SLdmg2eLr8QJOy-d0xEw
+I [30027] [2016-05-06 20:03:32.458] [[32mSynchronize[0m] Server Removed: xbWGNOO2qKusKmyHOIjkfg
+I [30027] [2016-05-06 20:03:32.459] [[32mSynchronize[0m] Server Removed: xbWGNOO2qKusKmyHOIjkfg
+I [2016-05-06 20:03:35.224] [[32mSynchronization[0m] Server Registered: Mg1zYAuldLjLZH37DF7QKQ
+I [2016-05-06 20:03:39.359] [[32mSynchronization[0m] Server Registered: zmdkfsZi3IJSj5QEpfcdVA
+I [2016-05-06 20:03:51.560] [[32mConnectionManager[0m] Connection opened: #<Connection::6e094b521f3430575253>
+I [2016-05-06 20:04:11.558] [[32mConnectionManager[0m] Connection closed: #<Connection::6e094b521f3430575253>
+I [2016-05-06 20:04:17.233] [[32mConnectionManager[0m] Connection closed: #<Connection::6e094b521f3430575253>
+I [2016-05-06 20:04:23.488] [[32mConnectionManager[0m] Connection opened: #<Connection::7b684f75fc50552c7d89>
+I [2016-05-06 20:04:43.489] [[32mConnectionManager[0m] Connection closed: #<Connection::7b684f75fc50552c7d89>
+I [2016-05-06 20:08:03.476] [[32mConnectionManager[0m] Connection closed: #<Connection::7b684f75fc50552c7d89>
+I [2016-05-06 20:08:03.866] [[32mConnectionManager[0m] Connection opened: #<Connection::c44ef550245d24da7bf6>
+I [2016-05-06 20:08:23.867] [[32mConnectionManager[0m] Connection closed: #<Connection::c44ef550245d24da7bf6>
+I [2016-05-06 20:08:28.700] [[32mConnectionManager[0m] Connection closed: #<Connection::c44ef550245d24da7bf6>
+I [2016-05-06 20:08:29.676] [[32mConnectionManager[0m] Connection opened: #<Connection::05a623c75c7c821511e0>
+I [2016-05-06 20:08:49.691] [[32mConnectionManager[0m] Connection closed: #<Connection::05a623c75c7c821511e0>
+I [2016-05-06 20:08:55.199] [[32mSynchronization[0m] Server Removed: Mg1zYAuldLjLZH37DF7QKQ
+I [2016-05-06 20:08:55.238] [[32mSynchronization[0m] Server Removed: Mg1zYAuldLjLZH37DF7QKQ
+I [2016-05-06 20:09:08.937] [[32mSynchronization[0m] Server Removed: zmdkfsZi3IJSj5QEpfcdVA
+I [2016-05-06 20:09:08.938] [[32mSynchronization[0m] Server Removed: zmdkfsZi3IJSj5QEpfcdVA
+I [2016-05-06 20:09:08.940] [[32mConnectionManager[0m] Connection closed: #<Connection::05a623c75c7c821511e0>
+I [2016-05-06 20:10:21.200] [[32mConnectionManager[0m] Connection opened: #<Connection::e0dba4103baa630ab31f>
+I [2016-05-06 20:10:41.196] [[32mConnectionManager[0m] Connection closed: #<Connection::e0dba4103baa630ab31f>
+I [2016-05-06 20:10:51.186] [[32mConnectionManager[0m] Connection closed: #<Connection::e0dba4103baa630ab31f>
+I [2016-05-06 20:12:30.455] [[32mConnectionManager[0m] Connection opened: #<Connection::1ce031e188c5ae3191c1>
+I [2016-05-06 20:12:50.451] [[32mConnectionManager[0m] Connection closed: #<Connection::1ce031e188c5ae3191c1>
+I [2016-05-06 20:13:00.440] [[32mConnectionManager[0m] Connection closed: #<Connection::1ce031e188c5ae3191c1>
+I [2016-05-06 20:16:25.119] [[32mSynchronization[0m] Server Registered: HdHgG5eUbAasbUKxPO9EMA
+I [2016-05-06 20:16:28.475] [[32mSynchronization[0m] Server Removed: HdHgG5eUbAasbUKxPO9EMA
+I [2016-05-06 20:16:28.479] [[32mSynchronization[0m] Server Removed: HdHgG5eUbAasbUKxPO9EMA
+I [2016-05-06 20:17:05.368] [[32mSynchronization[0m] Server Registered: YhJSTqpyuo5czkTXSkcJJA
+I [2016-05-06 20:17:26.675] [[32mSynchronization[0m] Server Removed: YhJSTqpyuo5czkTXSkcJJA
+I [2016-05-06 20:17:26.680] [[32mSynchronization[0m] Server Removed: YhJSTqpyuo5czkTXSkcJJA
+I [2016-05-06 20:17:36.276] [[32mSynchronization[0m] Server Registered: JER43ELQq69r3S9nunnPpg
+I [2016-05-06 20:17:44.208] [[32mSynchronization[0m] Server Registered: CoQgD4-8KurjRoCfPLEi9g
+I [2016-05-06 20:18:09.553] [[32mConnectionManager[0m] Connection opened: #<Connection::07c0fe7bac403d174a04>
+I [2016-05-06 20:18:21.545] [[32mConnectionManager[0m] Connection closed: #<Connection::07c0fe7bac403d174a04>
+I [2016-05-06 20:18:21.996] [[32mConnectionManager[0m] Connection opened: #<Connection::42e950da1034098c2151>
+I [2016-05-06 20:18:41.999] [[32mConnectionManager[0m] Connection closed: #<Connection::42e950da1034098c2151>
+I [2016-05-06 20:21:15.721] [[32mConnectionManager[0m] Connection closed: #<Connection::42e950da1034098c2151>
+I [2016-05-06 20:21:16.171] [[32mConnectionManager[0m] Connection opened: #<Connection::373aa4f10d4656652d0a>
+I [2016-05-06 20:21:36.174] [[32mConnectionManager[0m] Connection closed: #<Connection::373aa4f10d4656652d0a>
